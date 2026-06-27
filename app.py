@@ -39,7 +39,8 @@ with st.sidebar:
 
     api_base_url = st.text_input(
         label="API Base URL（接口地址）",
-        value="https://api.deepseek.com",
+        value="",
+        placeholder="https://api.deepseek.com",
         help="兼容 OpenAI 格式的 API 地址。例如：\n"
              "• DeepSeek: https://api.deepseek.com\n"
              "• SiliconFlow: https://api.siliconflow.cn/v1\n"
@@ -48,14 +49,15 @@ with st.sidebar:
 
     api_key = st.text_input(
         label="API Key（密钥）",
-        value=os.environ.get("DEEPSEEK_API_KEY", ""),
+        value="",
         type="password",
-        help="留空则自动使用环境变量 DEEPSEEK_API_KEY",
+        help="请填写你的 API Key，不会存储到服务器",
     )
 
     model_name = st.text_input(
         label="模型名称（Model Name）",
-        value="deepseek-chat",
+        value="",
+        placeholder="deepseek-chat",
         help="例如：deepseek-chat / deepseek-reasoner / gpt-4o 等",
     )
 
