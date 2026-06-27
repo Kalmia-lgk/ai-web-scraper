@@ -140,7 +140,8 @@ with col1:
     target_url = st.text_input(
         label="🔗 请输入要抓取的网页 URL",
         placeholder="例如：https://www.zhipin.com/web/geek/job?query=Python",
-        key="input_url",
+        value="",
+        key="input_url_empty",
     )
 
 with col2:

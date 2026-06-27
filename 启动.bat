@@ -1,14 +1,13 @@
-@echo off
+﻿@echo off
 chcp 65001 >nul
-title 🕷️ AI 全自动网页抓取与可视化分析看板
+title AI Web Scraper
 
 echo.
 echo ============================================================
-echo   🕷️ AI 全自动网页抓取与可视化分析看板
+echo     AI 全自动网页抓取与可视化分析看板
 echo ============================================================
 echo.
 
-:: 检查 streamlit 是否已安装
 pip show streamlit >nul 2>&1
 if %errorlevel% neq 0 (
     echo [信息] 未检测到 streamlit，正在安装依赖...
